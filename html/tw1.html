@@ -1,0 +1,52 @@
+<!doctype html>
+<html class="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <script src="https://cdn.jsdelivr.net/npm/tailwindcss-animate@1.0.7/dist/index.umd.js"></script>
+        <style type="text/tailwindcss">
+            @theme {
+                --color-clifford: #da373d;
+            }
+
+            @layer base {
+                button {
+                    @apply border border-green-500 bg-green-300 px-2 rounded-md cursor-pointer 
+                    hover:bg-green-400 hover:text-white active:ring-2;
+                }
+            }
+
+            @layer utility {
+                .btn {
+                    background-color: skyblue;
+                }
+            }
+        </style>
+    </head>
+
+    <!-- xs sm md lg xl 2xl 3xl -->
+    <body class="h-screen bg-green-100 grid place-items-center">
+        <div class="flex flex-col md:flex-row [&>button]:shadow-md [&button]:hover:shadow-xl 
+            border p-3 space-x-3 space-y-2">
+            <button class="">Button</button>
+            <button class="btn text-white group-hover:border-black">Button2</button>
+            <button class="btn text-black dark:text-white">Button3</button>
+            <h1 class="text-3xl font-bold underline text-clifford animate-bounce">
+                Hello world!
+            </h1>
+            <div class="border mx-5 mt-10 mb-10 p-3 text-red-500">Div</div>
+        </div>
+
+        <div class="group container flex gap-2 bg-white rounded-md p-2 shadow-md">
+            <img src="https://unsplash.com/photos/b51xWeb75R4/download?ixid=M3wxMjA3fDB8MXxhbGx8M3x8fHx8fHx8MTc2MTg3OTc1M3w&force=true" 
+            alt="lion" width="70" height="70" style="border: 1px solid #aaa; border-radius: 100%;">
+            <div className="[&>small]:block [&>small]:text-gray-500">
+                <div>indiflex.corp@gmail.com</div>
+                <small>description..111</small>
+                <small>description..222</small>
+            </div>
+        </div>
+    </body>
+
+</html>
